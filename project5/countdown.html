@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>JavaScript Task</title>
+<meta charset="UTF-8"> 
+<style>
+table, td {border: 1px solid black; border-collapse: collapse;}
+</style>
+
+<script>
+
+function Countdown()
+{
+var count=6;
+var pause=setInterval(Timer, 1000); //This will call the Timer function every 1 second
+
+function Timer()
+ {
+	 count=count-1;
+	switch (count)
+		 {
+			 case 5:
+		 document.getElementById("display").src="5.png";
+		 break;
+			 case 4:
+		 document.getElementById("display").src="4.png";
+		 break;
+			 case 3:
+		 document.getElementById("display").src="3.png";
+		 break;
+			 case 2:
+		 document.getElementById("display").src="2.png";
+		 break;
+			 case 1:
+		 document.getElementById("display").src="1.png";
+		 break;
+			 case 0:
+		document.getElementById("display").src="0.png";
+		}
+			 
+	 }
+  if (count < 0)
+   {
+  clearInterval(pause); //This will stop the Interval timer calling the Timer function when the count variable==0
+	 return;
+   }  
+  
+
+
+ }
+</script>
+
+</head>
+
+<body>
+
+<h1 style="text-align:center;"> Task 5<br>Programming for the web<br>JavaScript</h1>
+
+<br>
+
+<h1 style="text-align:center;">A digital countdown</h1>
+
+<table style="margin-left:auto; margin-right:auto;"> 
+<tr>
+<td style="height:110px"><img src="0.png" id="display" width="60px" alt="Number here"></td>
+</tr>
+</table>
+<span id="timer"></span>
+<p style="text-align:center;">Click the button to start the countdown</p><br>
+
+<p style="text-align:center;">
+<button type="button" onClick="Countdown()">Start</button>
+</p>
+</body>
+</html>
