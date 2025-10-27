@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Marks to Grade Conversion</title>
+
+<style>
+h1 {font-family:serif; font-size:36px; color:#ff0000; text-align:center}
+h2 {font-family:sans-serif; font-size:24px; color:#000000; text-align:center}
+body {background-color:#FFCC00}
+</style>
+
+</head>
+
+<body>
+
+    <h2>Faculty of Computer science</h2><br>
+    <h1>End of year module test results Mark to Grade utility</h1><br><br>
+    <h2>Click the button to enter the Mark and display the Grade</h2><br>
+  
+  <h2><button style font-size="24px" height="50px" width="300px" onClick="ConvertMark()"> Click to enter the mark</button></h2>
+  
+<h1 id="displaygradehere"></h1><br>
+ 
+<script>
+
+	function ConvertMark() {
+		var grade;
+		var mark = prompt("Enter your marks",0);
+		
+		if (mark>=87) {
+			grade = "A" ;
+		} else if(mark>=65 && mark<= 86) {
+			grade = "B" ;
+		} else if (mark >= 37 && mark<= 64) {
+			grade = "C" ;
+		} else{
+			grade = "F" ;
+		}	
+	document.getElementById("displaygradehere").innerHTML="For " + mark + " marks the grade awarded is: " + grade;
+	}
+</script>
+
+</body>
+</html>
