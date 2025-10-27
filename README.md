@@ -5,7 +5,8 @@ Each project demonstrates core programming concepts such as object-oriented desi
 The goal of this repository is to showcase my understanding of Java fundamentals and practical coding experience.
 
 ## Projects Included
-- **Calculator App** – A simple arithmetic calculator using basic Java operations.
-- **Student Management System** – Console-based application to add, delete, and view student data.
-- **File Handling Practice** – Examples of reading and writing data in Java.
-- **Mini Games or Logic Tasks** – Short programs demonstrating loops and conditions
+- **Guess the number game** – A simple number game using basic Java operations.
+- **Mark Conversion** – A project that converts the users marks into a grade (A-F).
+- **Countdown** – Counter that counts down accurately from 5 to 0.
+- **Recipe Generator** – This generates a cupcake recipe for the user based on its preferences.
+- **Scenery** –  A scroller showing different Scenery with unique descriptions
