@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Task</title>
+
+<style>
+ h1 {font-family:serif; font-size:36px; color:#ff0000; text-align:center}
+ h2 {font-family:sans-serif; font-size:24px; color:#0000ff; text-align:center}
+ table {margin-left:auto; margin-right:auto; width:650px;}
+ td {text-align: center}
+ button {height:30px; width:70px}
+</style>
+ 
+</head>
+ 
+<body>
+
+<h1>Cheraklia<br>A pearl in the <img src="pearl.png" alt ="Pearl image" width="30">cean </h1>
+
+
+<table>
+<tr>
+<td><button type="button" onClick="back()">Previous</button>
+</td>
+<td><img src="Beach.jpg" width="450" height= "300" id="pic" alt="Scenery pics here"> </td>
+
+<td><button type="button" onClick="foreward()">Next</button>
+</td>
+<tr>
+<td colspan ="3"> <h2 id="description">.</h2> </td>
+</tr>
+	</tr>
+
+</table>
+ 
+<script>
+
+ var Scenery=["Beach.jpg","Diving.jpg","Mountains.jpg","Rainforest.jpg","Ruins.jpg","Sea.jpg","Wildlife.jpg"];
+var Scenarytxts=["Enjoy our wonderful beaches","Dive on our coral reef",
+				 "Drive through our beautiful mountains","Trek through our lush rainforest",
+				 "Tour our ancient Roman ruins","Cruise our islands","Watch our varied wildlife"]
+  var counter=0;
+ var end=Scenery.length;
+ document.getElementById("description").innerHTML="Scroll through our breathtaking scenery";
+ 
+function foreward(){
+ if (counter== 6){
+ counter = 0;}
+ else {
+ counter ++;}
+ document.getElementById("pic").src= Scenery[counter]
+document.getElementById("description").innerHTML= Scenarytxts[counter];
+ 
+ }
+  
+ function back(){
+if (counter==0){
+ counter = 6;}
+ else {
+ counter --;}
+ document.getElementById("pic").src= Scenery[counter]
+	 document.getElementById("description").innerHTML= Scenarytxts[counter];
+ 
+ }
+</script>
+
+</body>
+
+</html> 
